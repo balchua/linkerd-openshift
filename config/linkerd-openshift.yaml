@@ -161,19 +161,6 @@ spec:
         args:
         - /io.buoyant/linkerd/config/config.yaml
         ports:
-        - name: http-outgoing
-          containerPort: 4140
-          hostPort: 4140
-        - name: http-incoming
-          containerPort: 4141
-        - name: h2-outgoing
-          containerPort: 4240
-          hostPort: 4240
-        - name: h2-incoming
-          containerPort: 4241
-        - name: grpc-outgoing
-          containerPort: 4340
-          hostPort: 4340
         - name: grpc-incoming
           containerPort: 4341
         - name: http-ingress
@@ -204,16 +191,6 @@ spec:
     app: l5d
   type: LoadBalancer
   ports:
-  - name: http-outgoing
-    port: 4140
-  - name: http-incoming
-    port: 4141
-  - name: h2-outgoing
-    port: 4240
-  - name: h2-incoming
-    port: 4241
-  - name: grpc-outgoing
-    port: 4340
   - name: grpc-incoming
     port: 4341
   - name: http-ingress
